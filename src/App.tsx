@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './fontStyles.css';
 import Header from './Components/Header';
-import NavBar from './Components/NavBar';
+import Nav from './Components/Nav';
 
 interface AppProps {}
 
@@ -16,7 +16,7 @@ const App = (props: AppProps) => {
           <Header />
         </div>
         <div className="col-12 p-0">
-          <NavBar />
+          <Nav />
         </div>
       </div>
     </div>
