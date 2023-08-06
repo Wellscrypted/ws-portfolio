@@ -37,8 +37,47 @@
   }
 }
 
+.icon {
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+}
+
+.icon:before {
+  display: inline-block;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fl-bigmug-line-circular220:before {
+  content: '\e019';
+}
+
 .container-fluid-0 {
   width: 100%;
   margin: 0px;
   padding: 0px;
+}
+
+.center-v-align {
+  display: flex !important;
+  align-items: center !important;
+}
+.center-align {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.center-vh-align {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.right-align {
+  display: flex !important;
+  justify-content: flex-end !important;
 }
