@@ -1,10 +1,7 @@
 import React from 'react';
 import IconListRouter from '../IconRouter/IconRouter';
 
-interface HeaderProps {}
-
-const Header = (props: HeaderProps) => {
-  // const {} = props;
+const Header = () => {
   return (
     <div className="container-fluid-0 py-2" style={{ backgroundColor: 'black' }}>
       <div className="row m-0" style={{ minHeight: '36px' }}>
