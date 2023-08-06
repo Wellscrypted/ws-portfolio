@@ -6,11 +6,11 @@ interface HeaderProps {}
 const Header = (props: HeaderProps) => {
   // const {} = props;
   return (
-    <div className="container-fluid-0" style={{ backgroundColor: 'black' }}>
-      <div className="row m-0" style={{ minHeight: '52px' }}>
+    <div className="container-fluid-0 py-2" style={{ backgroundColor: 'black' }}>
+      <div className="row m-0" style={{ minHeight: '36px' }}>
         <div className="col-6 col-md-8 col-lg-9 p-0 center-v-align">
           <div className="row m-0">
-            <div className="col-auto p-0 center-v-align px-3">
+            <div className="col-auto p-0 center-v-align ps-5 pe-2">
               <IconListRouter.FaAward style={{ fill: '#ffe500', height: 20 }} />
             </div>
             <div className="col p-0">
