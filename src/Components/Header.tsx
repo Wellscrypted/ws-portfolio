@@ -15,7 +15,7 @@ const Header = (props: HeaderProps) => {
             </div>
             <div className="col p-0">
               <div className="ft-reg sp-1 fs-14" style={{ color: '#aaa' }}>
-                HTML 5 - C# - CSS - Material UI - Bootstrap - JavaScript (NodeJs, jQuery, React)
+                Front-End UI/UX (React / React Native - JavaScript / TypeScript) Developer
               </div>
             </div>
           </div>
