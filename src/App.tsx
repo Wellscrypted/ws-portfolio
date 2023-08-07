@@ -29,11 +29,11 @@ const App = () => {
           <div className="col-12 p-0">
             <div className="container-fluid-1 py-3">
               <div className="row m-0">
-                <div className="col-auto center-v-align p-0">
+                <div className="col-auto center-vh-align p-0">
                   <img src={MainLogo} alt="logo" />
                 </div>
-                <div className="col p-0 px-2 pe-5">
-                  <Navbar className="justify-content-end" data-bs-theme="light">
+                <div className="col p-0 center-v-align justify-content-end px-2 pe-5">
+                  <Navbar data-bs-theme="light">
                     <Nav variant="underline">
                       <WSNavItem>
                         <Nav.Link as={Link} to="/" eventKey="">
