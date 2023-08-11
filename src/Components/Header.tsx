@@ -8,7 +8,7 @@ const Header = () => {
         <div className="col-6 col-md-8 col-lg-9 p-0 center-v-align">
           <div className="row m-0">
             <div className="col-auto p-0 center-v-align ps-5 pe-2">
-              <IconListRouter.FaAward style={{ fill: '#ffe500', height: 24 }} />
+              <IconListRouter.AwardIcon style={{ fill: '#ffe500' }} size={'20px'} />
             </div>
             <div className="col p-0">
               <div className="ft-bold sp-1 fs-14" style={{ color: '#aaa' }}>
