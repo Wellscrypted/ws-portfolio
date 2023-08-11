@@ -36,32 +36,32 @@ const App = () => {
                   <Navbar data-bs-theme="light">
                     <Nav variant="underline">
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/" eventKey="">
+                        <Nav.Link as={Link} to="/" eventKey="" className="ft-reg sp-1">
                           Home
                         </Nav.Link>
                       </WSNavItem>
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/experience" eventKey="experience">
+                        <Nav.Link as={Link} to="/experience" eventKey="experience" className="ft-reg sp-1">
                           Experience
                         </Nav.Link>
                       </WSNavItem>
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/projects" eventKey="projects">
+                        <Nav.Link as={Link} to="/projects" eventKey="projects" className="ft-reg sp-1">
                           Projects
                         </Nav.Link>
                       </WSNavItem>
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/history" eventKey="history">
+                        <Nav.Link as={Link} to="/history" eventKey="history" className="ft-reg sp-1">
                           History
                         </Nav.Link>
                       </WSNavItem>
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/languages" eventKey="languages">
+                        <Nav.Link as={Link} to="/languages" eventKey="languages" className="ft-reg sp-1">
                           Languages
                         </Nav.Link>
                       </WSNavItem>
                       <WSNavItem>
-                        <Nav.Link as={Link} to="/contact" eventKey="contact">
+                        <Nav.Link as={Link} to="/contact" eventKey="contact" className="ft-reg sp-1">
                           Contact
                         </Nav.Link>
                       </WSNavItem>
