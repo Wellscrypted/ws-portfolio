@@ -4,18 +4,18 @@
 }
 
 .arrow-container-left {
-  /* position: absolute; */
+  position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  left: 20px;
+  left: 15px;
   z-index: 1;
   cursor: pointer;
 }
 .arrow-container-right {
-  /* position: absolute; */
+  position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  right: 20px;
+  right: 15px;
   z-index: 1;
   cursor: pointer;
 }
@@ -66,4 +66,106 @@
   margin: 0 2px;
   cursor: pointer;
   font-size: 20px;
+}
+
+.slide-effect {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-0,
+.text-1,
+.text-2,
+.slideDown,
+.slideUp-0,
+.slideUp-1,
+.slideUp-2 {
+  position: relative;
+  opacity: 0;
+}
+
+.text-0 {
+  top: 40px;
+  font-weight: bold;
+  animation: slideUp-0 ease 1s forwards 0.75s;
+}
+
+.text-1 {
+  top: 40px;
+  font-weight: bold;
+  animation: slideUp-1 ease 1s forwards 0.75s;
+}
+
+.text-2 {
+  top: 40px;
+  font-weight: bold;
+  animation: slideUp-2 ease 1s forwards 0.75s;
+}
+
+.slideUp-0 {
+  top: 40px;
+  left: 10px;
+  animation: slideUp-0 ease 1s forwards 1.25s;
+}
+.slideUp-1 {
+  top: 40px;
+  left: 10px;
+  animation: slideUp-1 ease 1s forwards 1.25s;
+}
+.slideUp-2 {
+  top: 40px;
+  left: 10px;
+  animation: slideUp-2 ease 1s forwards 1.25s;
+}
+
+.refresh {
+  animation: move 5s infinite;
+}
+
+@keyframes slideUp-0 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+    animation: 6s linear 6s my-animation;
+  }
+}
+@keyframes slideUp-1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+    animation: 6s linear 6s my-animation;
+  }
+}
+@keyframes slideUp-2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 1;
+    animation: 6s linear 6s my-animation;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slide-effect,
+  .text-0,
+  .text-1,
+  .text-2,
+  .slideUp-0,
+  .slideUp-1,
+  .slideUp-2 {
+    font-size: 15px;
+  }
 }

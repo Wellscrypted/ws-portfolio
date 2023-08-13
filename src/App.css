@@ -77,6 +77,14 @@
   justify-content: center !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
 .right-align {
   display: flex !important;
   justify-content: flex-end !important;
@@ -96,4 +104,8 @@
 
 .full-height {
   height: 100%;
+}
+
+.underline {
+  text-decoration: underline;
 }
