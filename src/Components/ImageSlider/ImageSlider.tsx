@@ -62,10 +62,10 @@ const ImageSlider = (props: ImageSliderProps) => {
             <div className="col-10 center-vh-align">
               <div className="slide-effect">
                 <div className="row m-0">
-                  <div className={`col-12 p-0 text-center fs-24 text-${currentIndex} ft-bold`}>
+                  <div className={`col-12 p-0 text-center fs-36 text-${currentIndex} ft-bold`}>
                     {slides[currentIndex].header}
                   </div>
-                  <div className={`col-12 p-0 text-center slideUp-${currentIndex} ft-reg`}>
+                  <div className={`col-12 p-0 text-center fs-18 slideUp-${currentIndex} ft-reg`}>
                     {slides[currentIndex].content1}
                   </div>
                 </div>

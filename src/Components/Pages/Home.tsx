@@ -21,8 +21,8 @@ const Home = () => {
     {
       url: Image2,
       alt: 'Image2',
-      header: 'Responsive & Cross-Platform Capabilities',
-      content1: `I really enljy working with React Native for iOS and Android applications. Currently working on expanding my knowledge for React Native for Web.`,
+      header: 'Responsive Platform Capabilities',
+      content1: `I really enjoy creating with React Native for iOS and Android applications. Currently working on expanding my knowledge for React Native for Web.`,
       content2: '',
     },
     {
@@ -46,7 +46,7 @@ const Home = () => {
             : 'slider-container-style-lg'
         }
       >
-        <ImageSlider slides={slides} timer={7} />
+        <ImageSlider slides={slides} timer={8} />
       </div>
     </div>
   );

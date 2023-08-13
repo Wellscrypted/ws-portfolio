@@ -160,12 +160,36 @@
 
 @media only screen and (max-width: 600px) {
   .slide-effect,
-  .text-0,
-  .text-1,
-  .text-2,
   .slideUp-0,
   .slideUp-1,
   .slideUp-2 {
-    font-size: 15px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slide-effect,
+  .text-0,
+  .text-1,
+  .text-2 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .slide-effect,
+  .slideUp-0,
+  .slideUp-1,
+  .slideUp-2 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .slide-effect,
+  .text-0,
+  .text-1,
+  .text-2 {
+    font-size: 32px;
   }
 }
