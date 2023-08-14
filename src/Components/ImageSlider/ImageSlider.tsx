@@ -94,7 +94,7 @@ const ImageSlider = (props: ImageSliderProps) => {
         {slides?.map((slide: any, slideIndex: any) => {
           return (
             <div key={slideIndex} className="dot-styles" onClick={() => goToSlide(slideIndex)}>
-              <div className="eye" style={renderDotColor(slideIndex)}></div>
+              <div className="slide-dot" style={renderDotColor(slideIndex)}></div>
             </div>
           );
         })}

@@ -196,7 +196,7 @@
   }
 }
 
-.eye {
+.slide-dot {
   border: solid #81919c 2px;
   border-radius: 100%;
   position: relative;
@@ -204,7 +204,7 @@
   height: 1em;
   margin: 0 5px;
 }
-.eye::before {
+.slide-dot::before {
   content: '';
   display: block;
   position: absolute;
