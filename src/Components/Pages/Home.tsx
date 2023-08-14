@@ -46,7 +46,7 @@ const Home = () => {
             : 'slider-container-style-lg'
         }
       >
-        <ImageSlider slides={slides} timer={8} />
+        <ImageSlider slides={slides} componentFocus={'Home'} timer={8} />
       </div>
     </div>
   );
