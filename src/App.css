@@ -66,6 +66,7 @@
   display: flex !important;
   align-items: center !important;
 }
+
 .center-align {
   display: flex !important;
   justify-content: center !important;
@@ -108,4 +109,22 @@
 
 .underline {
   text-decoration: underline;
+}
+
+.window-container-style-sm {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.window-container-style-md {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.window-container-style-lg {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
 }

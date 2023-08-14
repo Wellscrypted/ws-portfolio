@@ -23,7 +23,7 @@ const Home = () => {
       url: Image1,
       alt: 'Image1',
       header: 'UI/UX Designs',
-      content1: `Creating beautiful and functional designs using Bootstrap, Material-UI, Adobe Photoshop, Adobe Illustrator, and other custom library's.`,
+      content1: `Creating beautiful and functional designs using Bootstrap, Material-UI, Adobe Photoshop, Adobe Illustrator, and other custom librarys.`,
       content2: '',
     },
     {
