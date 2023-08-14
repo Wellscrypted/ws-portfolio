@@ -12,6 +12,14 @@ const Home = () => {
 
   const slides = [
     {
+      url: Image2,
+      alt: 'Image2',
+      header: 'Front-End Developer',
+      content1:
+        'Helping to create a better user experience through the use of React, React Native, HTML, CSS, JavaScript, and TypeScript.',
+      content2: '',
+    },
+    {
       url: Image1,
       alt: 'Image1',
       header: 'UI/UX Designs',
@@ -19,24 +27,16 @@ const Home = () => {
       content2: '',
     },
     {
-      url: Image2,
-      alt: 'Image2',
-      header: 'Responsive Platform Capabilities',
-      content1: `I really enjoy creating with React Native for iOS and Android applications. Currently working on expanding my knowledge for React Native for Web.`,
-      content2: '',
-    },
-    {
       url: Image3,
-      alt: 'Image2',
-      header: 'Front-End Developer',
-      content1:
-        'Helping to create a better user experience through the use of React, React Native, HTML, CSS, JavaScript, and TypeScript.',
+      alt: 'Image3',
+      header: 'Responsive Platform Capabilities',
+      content1: `Using React Native for creating iOS and Android applications. Soon developing in React Native for Web.`,
       content2: '',
     },
   ];
 
   return (
-    <div className="container-fluid-1">
+    <div className="container-fluid-0 full-height" style={{ overflowY: 'auto' }}>
       <div
         className={
           phoneView

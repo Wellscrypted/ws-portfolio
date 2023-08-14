@@ -42,6 +42,12 @@ const ImageSlider = (props: ImageSliderProps) => {
     };
   }, [next, timer, sliderTime]);
 
+  const renderDotColor = (slideIndex: any) => {
+    if (slideIndex === currentIndex) {
+      return { border: 'solid 2px #ffe500' };
+    }
+  };
+
   return (
     <div className="slider-container">
       <div
@@ -85,9 +91,7 @@ const ImageSlider = (props: ImageSliderProps) => {
         {slides.map((slide: any, slideIndex: any) => {
           return (
             <div key={slideIndex} className="dot-styles" onClick={() => goToSlide(slideIndex)}>
-              <div>
-                <IconListRouter.DotIcon size={30} />
-              </div>
+              <div className="eye" style={renderDotColor(slideIndex)}></div>
             </div>
           );
         })}
