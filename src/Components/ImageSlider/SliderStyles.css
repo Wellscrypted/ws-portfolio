@@ -53,7 +53,7 @@
 }
 .slider-container-style-lg {
   width: 98%;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
 }
 
@@ -197,13 +197,14 @@
 }
 
 .slide-dot {
-  border: solid #81919c 2px;
+  border: solid #373d43 2px;
   border-radius: 100%;
   position: relative;
   width: 1em;
   height: 1em;
   margin: 0 5px;
 }
+
 .slide-dot::before {
   content: '';
   display: block;
@@ -213,6 +214,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #81919c;
+  background: #373d43;
   border-radius: 100%;
 }
