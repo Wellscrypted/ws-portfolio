@@ -36,7 +36,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="container-fluid-0 full-height" style={{ overflowY: 'auto' }}>
+    <div className="container-fluid-0" style={{ overflowY: 'auto' }}>
       <div
         className={
           phoneView

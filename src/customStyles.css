@@ -1,0 +1,15 @@
+.container-style-sm {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+.container-style-md {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+.container-style-lg {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}

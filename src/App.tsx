@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './fontStyles.css';
+import './customStyles.css';
 import Header from './Components/Header';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Components/Pages/Home';
