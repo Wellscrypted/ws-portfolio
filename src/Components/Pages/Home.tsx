@@ -6,9 +6,15 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 import { useMediaQuery } from '@mui/material';
 import '../ImageSlider/SliderStyles.css';
 
-const Home = () => {
+interface HomeProps {
+  topBars: number;
+}
+
+const Home = (props: HomeProps) => {
+  const { topBars } = props;
   const phoneView = useMediaQuery('(max-width: 500px)');
   const tabletView = useMediaQuery('(max-width: 768px)');
+  console.log('Home topBars: ', topBars);
 
   const slides = [
     {

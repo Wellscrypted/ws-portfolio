@@ -1,9 +1,12 @@
 import React from 'react';
 
-interface ContactProps {}
+interface ContactProps {
+  topBars: number;
+}
 
 const Contact = (props: ContactProps) => {
-  // const {} = props;
+  const { topBars } = props;
+  console.log('Contact topBars: ', topBars);
 
   return <div>Contact</div>;
 };

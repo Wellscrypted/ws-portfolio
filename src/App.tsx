@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import './fontStyles.css';
 import './customStyles.css';
@@ -20,14 +20,31 @@ const App = () => {
     return <Nav.Item className="mx-1">{children}</Nav.Item>;
   };
 
+  const headerRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const [topBars, setTopBars] = useState<number>(0);
+
+  const updateCombinedHeight = () => {
+    const headerHeight = headerRef.current?.clientHeight || 0;
+    const navHeight = navRef.current?.clientHeight || 0;
+    setTopBars(headerHeight + navHeight);
+  };
+
+  useEffect(() => {
+    updateCombinedHeight();
+    const handleResize = () => updateCombinedHeight();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Router>
       <div className="container-fluid-0">
         <div className="row m-0">
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={headerRef}>
             <Header />
           </div>
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={navRef}>
             <div className="container-fluid-1 py-3">
               <div className="row m-0">
                 <div className="col-auto center-vh-align p-0">
@@ -74,12 +91,12 @@ const App = () => {
           </div>
           <div className="col-12 p-0">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/languages" element={<Languages />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Home topBars={topBars} />} />
+              <Route path="/experience" element={<Experience topBars={topBars} />} />
+              <Route path="/projects" element={<Projects topBars={topBars} />} />
+              <Route path="/history" element={<History topBars={topBars} />} />
+              <Route path="/languages" element={<Languages topBars={topBars} />} />
+              <Route path="/contact" element={<Contact topBars={topBars} />} />
             </Routes>
           </div>
         </div>

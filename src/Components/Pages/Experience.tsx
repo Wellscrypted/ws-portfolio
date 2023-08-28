@@ -3,13 +3,16 @@ import React from 'react';
 // import { Container } from 'react-bootstrap';
 import image1 from '../../images/video-preview-962x465.jpg';
 
-interface ExperienceProps {}
+interface ExperienceProps {
+  topBars: number;
+}
 
 const Experience = (props: ExperienceProps) => {
-  // const {} = props;
+  const { topBars } = props;
   const phoneView = useMediaQuery('(max-width: 500px)');
   const tabletView = useMediaQuery('(max-width: 768px)');
   // const showPicture = useMediaQuery('(max-width: 576px)');
+  console.log('Experience topBars: ', topBars);
 
   return (
     <div className="container-fluid-0" style={{ overflowY: 'auto' }}>
