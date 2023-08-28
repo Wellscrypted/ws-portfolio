@@ -15,14 +15,13 @@ import Contact from './Components/Pages/Contact';
 import { Navbar } from 'react-bootstrap';
 
 const App = () => {
-  const WSNavItem = (props: any) => {
-    const { children } = props;
-    return <Nav.Item className="mx-1">{children}</Nav.Item>;
-  };
+  const WSNavItem = (props: any) => <Nav.Item className="mx-1">{props.children}</Nav.Item>;
 
   const headerRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
   const [topBars, setTopBars] = useState<number>(0);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   const updateCombinedHeight = () => {
     const headerHeight = headerRef.current?.clientHeight || 0;
@@ -32,10 +31,16 @@ const App = () => {
 
   useEffect(() => {
     updateCombinedHeight();
-    const handleResize = () => updateCombinedHeight();
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+      updateCombinedHeight();
+    };
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const bodyHeight = windowHeight - topBars - 2;
 
   return (
     <Router>
@@ -89,14 +94,14 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={bodyRef}>
             <Routes>
-              <Route path="/" element={<Home topBars={topBars} />} />
-              <Route path="/experience" element={<Experience topBars={topBars} />} />
-              <Route path="/projects" element={<Projects topBars={topBars} />} />
-              <Route path="/history" element={<History topBars={topBars} />} />
-              <Route path="/languages" element={<Languages topBars={topBars} />} />
-              <Route path="/contact" element={<Contact topBars={topBars} />} />
+              <Route path="/" element={<Home bodyHeight={bodyHeight} />} />
+              <Route path="/experience" element={<Experience bodyHeight={bodyHeight} />} />
+              <Route path="/projects" element={<Projects bodyHeight={bodyHeight} />} />
+              <Route path="/history" element={<History bodyHeight={bodyHeight} />} />
+              <Route path="/languages" element={<Languages bodyHeight={bodyHeight} />} />
+              <Route path="/contact" element={<Contact bodyHeight={bodyHeight} />} />
             </Routes>
           </div>
         </div>

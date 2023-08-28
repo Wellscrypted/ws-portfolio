@@ -7,14 +7,14 @@ import { useMediaQuery } from '@mui/material';
 import '../ImageSlider/SliderStyles.css';
 
 interface HomeProps {
-  topBars: number;
+  bodyHeight: number;
 }
 
 const Home = (props: HomeProps) => {
-  const { topBars } = props;
+  const { bodyHeight } = props;
   const phoneView = useMediaQuery('(max-width: 500px)');
   const tabletView = useMediaQuery('(max-width: 768px)');
-  console.log('Home topBars: ', topBars);
+  console.log('Home bodyHeight: ', bodyHeight);
 
   const slides = [
     {

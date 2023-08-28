@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface ContactProps {
-  topBars: number;
+  bodyHeight: number;
 }
 
 const Contact = (props: ContactProps) => {
-  const { topBars } = props;
-  console.log('Contact topBars: ', topBars);
+  const { bodyHeight } = props;
+  console.log('Contact bodyHeight: ', bodyHeight);
 
   return <div>Contact</div>;
 };

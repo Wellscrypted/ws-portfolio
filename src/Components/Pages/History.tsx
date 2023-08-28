@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface HistoryProps {
-  topBars: number;
+  bodyHeight: number;
 }
 
 const History = (props: HistoryProps) => {
-  const { topBars } = props;
-  console.log('History topBars: ', topBars);
+  const { bodyHeight } = props;
+  console.log('History bodyHeight: ', bodyHeight);
 
   return <div>History</div>;
 };

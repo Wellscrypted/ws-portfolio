@@ -1,12 +1,12 @@
 import React from 'react';
 
 interface LanguagesProps {
-  topBars: number;
+  bodyHeight: number;
 }
 
 const Languages = (props: LanguagesProps) => {
-  const { topBars } = props;
-  console.log('Languages topBars: ', topBars);
+  const { bodyHeight } = props;
+  console.log('Languages bodyHeight: ', bodyHeight);
 
   return <div>Languages</div>;
 };

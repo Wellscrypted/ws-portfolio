@@ -1,33 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 interface ProjectsProps {
-  topBars: number;
+  bodyHeight: number;
 }
 
 const Projects = (props: ProjectsProps) => {
-  const { topBars } = props;
-  console.log('Projects topBars: ', topBars);
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.innerWidth);
-      setWindowHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
+  const { bodyHeight } = props;
+  console.log('Projects bodyHeight: ', bodyHeight);
 
   return (
     <div className="container-fluid-0 border">
-      <div>Width: {windowWidth}</div>
-      <div>Height: {windowHeight}</div>
+      <div style={{ height: `${bodyHeight}px`, border: 'solid red 1px' }}></div>
     </div>
   );
 };
