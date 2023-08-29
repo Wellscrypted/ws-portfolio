@@ -8,7 +8,7 @@ const Header = () => {
         <div className="col-6 col-md-8 col-lg-9 p-0 center-v-align">
           <div className="row m-0">
             <div className="col-auto p-0 center-v-align ps-5 pe-2">
-              <IconListRouter.AwardIcon style={{ fill: '#ffe500' }} size={'20px'} />
+              <IconListRouter.AwardIcon style={{ fill: '#ebd618' }} size={'20px'} />
             </div>
             <div className="col p-0">
               <div className="ft-bold sp-1 fs-14" style={{ color: '#aaa' }}>
@@ -20,7 +20,7 @@ const Header = () => {
         <div className="col-6 col-md-4 col-lg-3 p-0 right-align center-v-align px-4">
           <div className="row m-0">
             <div className="col-auto p-0 px-2">
-              <div className="ft-bold sp-1 fs-14" style={{ color: '#ffe500' }}>
+              <div className="ft-bold sp-1 fs-14" style={{ color: '#ebd618' }}>
                 Phone:
               </div>
             </div>
