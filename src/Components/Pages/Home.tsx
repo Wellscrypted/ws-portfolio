@@ -42,18 +42,8 @@ const Home = (props: HomeProps) => {
   ];
 
   return (
-    <div className="container-fluid-0" style={{ overflowY: 'auto' }}>
-      <div
-        className={
-          phoneView
-            ? 'slider-container-style-sm'
-            : tabletView
-            ? 'slider-container-style-md'
-            : 'slider-container-style-lg'
-        }
-      >
-        <ImageSlider slides={slides} componentFocus={'Home'} timer={8} />
-      </div>
+    <div className="container-fluid-0 p-4" style={{ overflowY: 'auto', height: `${bodyHeight}px` }}>
+      <ImageSlider slides={slides} componentFocus={'Home'} timer={8} />
     </div>
   );
 };
