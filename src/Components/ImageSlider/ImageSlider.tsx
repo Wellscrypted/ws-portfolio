@@ -43,9 +43,9 @@ const ImageSlider = (props: ImageSliderProps) => {
     };
   }, [next, timer, sliderTime]);
 
-  const renderDotColor = (slideIndex: any) => {
+  const renderRingColor = (slideIndex: any) => {
     if (slideIndex === currentIndex) {
-      return { border: 'solid 2px #ffe500' };
+      return { border: 'solid 2.5px #ffe500' };
     }
   };
 
@@ -94,7 +94,7 @@ const ImageSlider = (props: ImageSliderProps) => {
         {slides?.map((slide: any, slideIndex: any) => {
           return (
             <div key={slideIndex} className="dot-styles" onClick={() => goToSlide(slideIndex)}>
-              <div className="slide-dot" style={renderDotColor(slideIndex)}></div>
+              <div className="slide-dot" style={renderRingColor(slideIndex)}></div>
             </div>
           );
         })}

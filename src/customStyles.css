@@ -1,0 +1,241 @@
+.container-style-sm {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+}
+.container-style-md {
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+.container-style-lg {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.reveal-flex {
+  display: flex !important;
+}
+
+.thumb-video {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background: #25293f;
+}
+
+.thumb-video__image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  max-width: none;
+  opacity: 0.6;
+}
+
+@supports (object-fit: cover) {
+  .thumb-video__image {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 869px) {
+  .thumb-video__image {
+    width: 50%;
+    height: 75%;
+  }
+}
+
+@media screen and (min-width: 870px) and (max-width: 991px) {
+  .thumb-video__image {
+    width: 75%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .thumb-video__image {
+    transition: 1.5s;
+  }
+  .thumb-video:hover .thumb-video__image {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+  .ie-10 .thumb-video__image,
+  .ie-11 .thumb-video__image {
+    will-change: transform;
+    transition: 0.77s;
+  }
+  .ie-10 .thumb-video:hover .thumb-video__image,
+  .ie-11 .thumb-video:hover .thumb-video__image {
+    transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1);
+  }
+}
+
+.thumb-video__caption {
+  position: relative;
+  z-index: 2;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 300px;
+  width: 100%;
+  padding: 30px 40px;
+}
+
+.section-md {
+  padding: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .section-md {
+    padding: 40px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-md {
+    padding: 50px 0;
+  }
+}
+
+.box-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box-width-1 {
+  max-width: 470px;
+}
+
+.box-custom h2 * {
+  vertical-align: baseline;
+}
+
+.box-custom .object-decorated_inline {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0.26;
+}
+
+.object-decorated {
+  position: relative;
+  margin-left: -5px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.object-decorated > * {
+  display: block;
+  margin: 0 5px;
+}
+
+.object-decorated h4 {
+  font-weight: 400;
+  color: #424242;
+}
+
+@media (min-width: 768px) {
+  .object-decorated {
+    margin-left: -10px;
+  }
+  .object-decorated > * {
+    margin: 0 10px;
+  }
+}
+
+.box-custom .object-decorated_inline {
+  font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  opacity: 0.26;
+}
+
+.object-decorated_inline {
+  margin-top: 0;
+  margin-left: -8px;
+}
+
+* + .object-decorated_inline {
+  margin-left: 4px;
+}
+
+.object-decorated_inline > * {
+  font-weight: inherit;
+  margin: 0 8px;
+}
+
+.object-decorated_inline .object-decorated__divider {
+  width: 36px;
+  height: 4px;
+}
+
+h5,
+.heading-5 {
+  font-size: 18px;
+  line-height: 1.33333;
+}
+
+h5 + img,
+.heading-5 + img {
+  margin-top: 30px;
+}
+
+h5 + p,
+.heading-5 + p,
+h6 + p,
+.heading-6 + p {
+  margin-top: 20px;
+}
+
+h4 + h5,
+.heading-4 + h5,
+h4 + .heading-5,
+.heading-4 + .heading-5 {
+  margin-top: 0;
+}
+
+@media (max-width: 991px) {
+  .grid-demonstration h5,
+  .grid-demonstration .heading-5 {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 480px) {
+  .grid-demonstration h5,
+  .grid-demonstration .heading-5 {
+    letter-spacing: 0.15em;
+  }
+}

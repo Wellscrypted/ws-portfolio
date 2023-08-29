@@ -1,9 +1,12 @@
 import React from 'react';
 
-interface LanguagesProps {}
+interface LanguagesProps {
+  bodyHeight: number;
+}
 
 const Languages = (props: LanguagesProps) => {
-  // const {} = props;
+  const { bodyHeight } = props;
+  console.log('Languages bodyHeight: ', bodyHeight);
 
   return <div>Languages</div>;
 };

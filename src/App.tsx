@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import './fontStyles.css';
+import './customStyles.css';
 import Header from './Components/Header';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Components/Pages/Home';
@@ -14,19 +15,41 @@ import Contact from './Components/Pages/Contact';
 import { Navbar } from 'react-bootstrap';
 
 const App = () => {
-  const WSNavItem = (props: any) => {
-    const { children } = props;
-    return <Nav.Item className="mx-1">{children}</Nav.Item>;
+  const WSNavItem = (props: any) => <Nav.Item className="mx-1">{props.children}</Nav.Item>;
+
+  const headerRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const bodyRef = useRef<HTMLDivElement>(null);
+  const [topBars, setTopBars] = useState<number>(0);
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  const updateCombinedHeight = () => {
+    const headerHeight = headerRef.current?.clientHeight || 0;
+    const navHeight = navRef.current?.clientHeight || 0;
+    setTopBars(headerHeight + navHeight);
   };
+
+  useEffect(() => {
+    updateCombinedHeight();
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+      updateCombinedHeight();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const bodyHeight = windowHeight - topBars - 2;
 
   return (
     <Router>
       <div className="container-fluid-0">
         <div className="row m-0">
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={headerRef}>
             <Header />
           </div>
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={navRef}>
             <div className="container-fluid-1 py-3">
               <div className="row m-0">
                 <div className="col-auto center-vh-align p-0">
@@ -71,14 +94,14 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="col-12 p-0">
+          <div className="col-12 p-0" ref={bodyRef}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/history" element={<History />} />
-              <Route path="/languages" element={<Languages />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/" element={<Home bodyHeight={bodyHeight} />} />
+              <Route path="/experience" element={<Experience bodyHeight={bodyHeight} />} />
+              <Route path="/projects" element={<Projects bodyHeight={bodyHeight} />} />
+              <Route path="/history" element={<History bodyHeight={bodyHeight} />} />
+              <Route path="/languages" element={<Languages bodyHeight={bodyHeight} />} />
+              <Route path="/contact" element={<Contact bodyHeight={bodyHeight} />} />
             </Routes>
           </div>
         </div>

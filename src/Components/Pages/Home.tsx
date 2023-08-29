@@ -6,9 +6,15 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 import { useMediaQuery } from '@mui/material';
 import '../ImageSlider/SliderStyles.css';
 
-const Home = () => {
+interface HomeProps {
+  bodyHeight: number;
+}
+
+const Home = (props: HomeProps) => {
+  const { bodyHeight } = props;
   const phoneView = useMediaQuery('(max-width: 500px)');
   const tabletView = useMediaQuery('(max-width: 768px)');
+  console.log('Home bodyHeight: ', bodyHeight);
 
   const slides = [
     {
@@ -36,18 +42,8 @@ const Home = () => {
   ];
 
   return (
-    <div className="container-fluid-0 full-height" style={{ overflowY: 'auto' }}>
-      <div
-        className={
-          phoneView
-            ? 'slider-container-style-sm'
-            : tabletView
-            ? 'slider-container-style-md'
-            : 'slider-container-style-lg'
-        }
-      >
-        <ImageSlider slides={slides} componentFocus={'Home'} timer={8} />
-      </div>
+    <div className="container-fluid-0 p-4" style={{ overflowY: 'auto', height: `${bodyHeight}px` }}>
+      <ImageSlider slides={slides} componentFocus={'Home'} timer={8} />
     </div>
   );
 };
