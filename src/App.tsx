@@ -12,7 +12,7 @@ import Projects from './Components/Pages/Projects';
 import History from './Components/Pages/History';
 import Languages from './Components/Pages/Languages';
 import Contact from './Components/Pages/Contact';
-import { Container, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { isMobile } from 'react-device-detect';
 
