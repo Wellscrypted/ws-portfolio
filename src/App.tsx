@@ -59,7 +59,7 @@ const App = () => {
                 </div>
                 <div
                   className={`col center-vh-align ${setPosition ? 'justify-content-end' : ''} ${
-                    isMobile ? 'm-0 p-0' : 'me-3 m-0 p-0'
+                    isMobile ? 'm-0 p-0' : 'me-4 m-0 p-0'
                   }`}
                 >
                   <Navbar data-bs-theme="light">
