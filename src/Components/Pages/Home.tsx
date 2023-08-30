@@ -3,7 +3,6 @@ import Image1 from '../../images/slider-slide-1-1464x660.jpg';
 import Image2 from '../../images/slider-slide-2-1464x660.jpg';
 import Image3 from '../../images/slider-slide-3-1464x660.jpg';
 import ImageSlider from '../ImageSlider/ImageSlider';
-import { useMediaQuery } from '@mui/material';
 import '../ImageSlider/SliderStyles.css';
 
 interface HomeProps {
@@ -12,9 +11,6 @@ interface HomeProps {
 
 const Home = (props: HomeProps) => {
   const { bodyHeight } = props;
-  const phoneView = useMediaQuery('(max-width: 500px)');
-  const tabletView = useMediaQuery('(max-width: 768px)');
-  console.log('Home bodyHeight: ', bodyHeight);
 
   const slides = [
     {
