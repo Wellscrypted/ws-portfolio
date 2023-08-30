@@ -14,6 +14,7 @@ import Languages from './Components/Pages/Languages';
 import Contact from './Components/Pages/Contact';
 import { Container, Navbar } from 'react-bootstrap';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { isMobile } from 'react-device-detect';
 
 const App = () => {
   const WSNavItem = (props: any) => <Nav.Item className="col center-vh-align p-0 mx-1">{props.children}</Nav.Item>;
@@ -56,7 +57,11 @@ const App = () => {
                 <div className={`col-12 col-md-auto auto m-0 p-0 center-vh-align ${setPosition ? '' : 'pt-3'}`}>
                   <img src={MainLogo} alt="logo" />
                 </div>
-                <div className={`col m-0 p-0 center-vh-align ${setPosition ? 'justify-content-end' : ''}`}>
+                <div
+                  className={`col center-vh-align ${setPosition ? 'justify-content-end' : ''} ${
+                    isMobile ? 'm-0 p-0' : 'me-3 m-0 p-0'
+                  }`}
+                >
                   <Navbar data-bs-theme="light">
                     <Nav variant="underline">
                       <div className="row m-0 pt-2">
