@@ -75,7 +75,7 @@ const App = () => {
                             Experience
                           </Nav.Link>
                         </WSNavItem>
-                        <WSNavItem>
+                        {/* <WSNavItem>
                           <Nav.Link as={Link} to="/projects" eventKey="projects" className="ft-reg sp-1">
                             Projects
                           </Nav.Link>
@@ -89,7 +89,7 @@ const App = () => {
                           <Nav.Link as={Link} to="/languages" eventKey="languages" className="ft-reg sp-1">
                             Languages
                           </Nav.Link>
-                        </WSNavItem>
+                        </WSNavItem> */}
                         <WSNavItem>
                           <Nav.Link as={Link} to="/contact" eventKey="contact" className="ft-reg sp-1">
                             Contact
